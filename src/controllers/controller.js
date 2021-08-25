@@ -40,15 +40,14 @@ $(document).ready(function() {
         alert(date.toDateString() + tenor);
     });
     /*
-   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-   - Initierar berÃ¤kningar och skriver ut resultat.
+   - Delete error messages from the page
    */
     $("body").on("click", "#hover", function(e) {
         $("#hover").remove();
     });
    /*
-   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-   - Initierar berÃ¤kningar och skriver ut resultat.
+   - Changes the value of the amount to be executed
+   - Retrieve the value from a dropdown
    */
     $("body").on("click", ".select_amount", function() {
         var price = parseFloat($("#" + this.id + ".price").html());
