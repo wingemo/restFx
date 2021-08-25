@@ -66,8 +66,7 @@ $(document).ready(function() {
         $("[data-for=" + this.id + "]").slideToggle("");
     });
    /*
-   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-   - Initierar berÃ¤kningar och skriver ut resultat.
+   - Changes the mouse pointer when the computer mouse is over a table
    */
     $("table").hover(function() {
         $(this).css('cursor', 'pointer');
