@@ -11,4 +11,5 @@ Philip Wingemo - Some design choices
 
 Run the following to make a request:
 ```
-npm run make-request
+cd scripts
+npm run make-request.js
