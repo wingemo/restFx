@@ -20,7 +20,7 @@ $(document).ready(function() {
     $("#add").click(function() {
         var inArray = jQuery.inArray($("#OrderID").val(), orderIDarray);
         if (inArray == -1) {
-            $("#orders").append($("#template").html());
+            $("#orders").append($("#template"));
             $("#" + $("#OrderID").val() + ".total").val($("#Amount").val());
             $("#" + $("#OrderID").val() + ".side").val("SELL");
         } else {
