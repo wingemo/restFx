@@ -1,3 +1,10 @@
+/* 
+   Property of Swedbank AB
+
+   Philip Wingemo
+   Created: 2021-08-25
+*/
+
 $(document).ready(function() {
     marg = 0;
     var orderIDarray = [];
