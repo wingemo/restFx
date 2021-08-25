@@ -9,8 +9,8 @@
 var orderIDarray = []; // Array med varje order i
 
 /*
-- Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-- Initierar berÃ¤kningar och skriver ut resultat.
+- A page can't be manipulated safely until the document is "ready."
+- This function will only run once the page (DOM) is ready for JavaScript.
 */
 $(document).ready(function() {
    /*
