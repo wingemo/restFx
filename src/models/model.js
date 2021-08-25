@@ -1,6 +1,5 @@
 /* 
    Property of Swedbank AB
-
    Philip Wingemo, Emil Oad
    Created: 2021-08-25
 */
@@ -10,13 +9,10 @@
 - Data comes from the controller
 */
 function model(obj, sum, date, side) {
-	return function handleResponse(data) {
-	  alert(data);
-	}
-	
+	var output;
 	$.ajax({
 		method: "POST",
-		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/adapter/adapter.php",
+		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
 		data: {
 			amount: sum,
 			amountCurrency: obj[3],
@@ -26,7 +22,10 @@ function model(obj, sum, date, side) {
 			settlementDate: date,
 			side: side,
 			timeout: 11000
-		},
-		success:handleResponse
+		}
+	}).done(function(msg) {
+		output = JSON.parse(msg);
 	});
+	return output;
+
 };
