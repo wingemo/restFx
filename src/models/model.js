@@ -26,6 +26,7 @@ function model(obj, sum, date, side) {
 		}
 	}).done(function(msg) {
 	  data = msg;
+	  alert("hello");
 	});
 	return data;
 };
