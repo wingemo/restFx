@@ -16,3 +16,4 @@ $.ajax({
         let obj = JSON.parse(msg);
         return obj;
     })
+});
