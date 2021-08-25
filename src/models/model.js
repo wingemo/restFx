@@ -13,7 +13,7 @@ var data;
 */
 function model(obj, sum, date, side) {
 	return function handleResponse(data) {
-	  return data;
+	  alert(data);
 	}
 	
 	$.ajax({
