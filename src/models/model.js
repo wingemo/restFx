@@ -24,7 +24,6 @@ function model(obj, sum, date, side) {
 			timeout: 11000
 		}
 	}).done(function(msg) {
-		let tmp = JSON.parse(msg);
-		console.log(tmp);
+		return JSON.parse(msg);
 	})
 };
