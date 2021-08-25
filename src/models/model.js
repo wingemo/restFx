@@ -11,6 +11,7 @@
 function model(obj, sum, date, side) {
 	var output;
 	$.ajax({
+		async: false,
 		method: "POST",
 		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/adapter/adapter.php",
 		data: {
