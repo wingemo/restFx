@@ -43,7 +43,7 @@ $(document).ready(function() {
         let id = "#" + this.id;
         let date = $("#" + this.id + ".date").val();
         let sum = $("#" + this.id + ".total").val();
-        model(obj);
+        model(obj, sum, date, id);
         if (obj.tppMessages) {
             $("body").prepend('<div id="hover"  aria-live="polite"  data-autohide="false"  aria-atomic="true" style="position: relative; min-height: px; z-index: 1000"> <div class="toast" data-autohide="false"  style="margin-right: 40px;position: absolute; top:750px; right: 0;"><div class="toast-header bg-danger" style="color: white"> <strong class="mr-auto">Error Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong> </div>  <div class="toast-body">' + obj.tppMessages[0].text + ' </div>  </div></div></div>');
             $('.toast').toast('show');
