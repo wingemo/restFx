@@ -9,13 +9,11 @@
 var orderIDarray = []; // Array med varje order i
 
 /*
---- Compute ---
 - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
 - Initierar berÃ¤kningar och skriver ut resultat.
 */
 $(document).ready(function() {
    /*
-   --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
    - Initierar berÃ¤kningar och skriver ut resultat.
    */
@@ -33,7 +31,6 @@ $(document).ready(function() {
         orderIDarray.push(tmp);
     });
    /*
-   --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
    - Initierar berÃ¤kningar och skriver ut resultat.
    */
@@ -43,7 +40,6 @@ $(document).ready(function() {
         alert(date.toDateString() + tenor);
     });
     /*
-   --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
    - Initierar berÃ¤kningar och skriver ut resultat.
    */
@@ -51,7 +47,6 @@ $(document).ready(function() {
         $("#hover").remove();
     });
    /*
-   --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
    - Initierar berÃ¤kningar och skriver ut resultat.
    */
@@ -65,7 +60,6 @@ $(document).ready(function() {
         }
     });
    /*
-   --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
    - Initierar berÃ¤kningar och skriver ut resultat.
    */
@@ -73,7 +67,6 @@ $(document).ready(function() {
         $("[data-for=" + this.id + "]").slideToggle("");
     });
    /*
-   --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
    - Initierar berÃ¤kningar och skriver ut resultat.
    */
@@ -81,7 +74,6 @@ $(document).ready(function() {
         $(this).css('cursor', 'pointer');
     });
    /*
-   --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
    - Initierar berÃ¤kningar och skriver ut resultat.
    */
