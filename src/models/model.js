@@ -10,7 +10,7 @@
 - Data comes from the controller
 */
 function model(obj, sum, date, side) {
-	$.ajax({
+	return $.ajax({
 		method: "POST",
 		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
 		data: {
