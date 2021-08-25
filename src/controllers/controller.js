@@ -96,7 +96,7 @@ $(document).ready(function() {
         } else {
             $(id + ".send").removeClass("btn-primary");
             $(id + ".send").addClass("btn-danger");
-            $("#finish").append('<tr class="answerTable" style="background-color: #50C878; color: white;"><td>' + obj.fxOrder.externalId + '</td><td>' + obj.fxOrder.side + '</td><td>' + obj.fxOrder.amount + '</td><td>' + obj.fxOrder.counterAmount + '</td><td>' + obj.fxOrder.currencyPair + '</td><td>' + obj.fxOrder.executionRate + '</td><td>' + obj.fxOrder.settlementDate + '</td><td>' + obj.orderStatus + '</td></tr><tr  data-for="' + obj.fxOrder.externalId + '" class="answer" style="display:none"></tr>');
+            $("#finish").append(success_message());
         }
     });
 });
