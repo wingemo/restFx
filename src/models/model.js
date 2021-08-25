@@ -9,7 +9,7 @@
 - Sends a POST request to the adapter
 - Data comes from the controller
 */
-model function(obj, sum, date, side) {
+function model(obj, sum, date, side) {
 	$.ajax({
 		method: "POST",
 		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
