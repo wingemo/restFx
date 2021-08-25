@@ -2,10 +2,6 @@
    Property of Swedbank AB
    Philip Wingemo, Emil Oad
    Created: 2021-08-25
-   
-   This controller are responsible 
-   for controlling the flow of 
-   the application execution.
 */
 
 /* Globala variabler */
