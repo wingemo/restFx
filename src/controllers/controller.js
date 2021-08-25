@@ -59,8 +59,8 @@ $(document).ready(function() {
         }
     });
    /*
-   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-   - Initierar berÃ¤kningar och skriver ut resultat.
+   - Displays more information about an order
+   - Activated by the user clicking on the row in the table
    */
     $("body").on("click", ".header", function(e) {
         $("[data-for=" + this.id + "]").slideToggle("");
