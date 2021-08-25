@@ -12,6 +12,10 @@ var data;
 - Data comes from the controller
 */
 function model(obj, sum, date, side) {
+	return function handleResponse(data) {
+	  return data;
+	}
+	
 	$.ajax({
 		method: "POST",
 		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/adapter/adapter.php",
@@ -24,6 +28,7 @@ function model(obj, sum, date, side) {
 			settlementDate: date,
 			side: side,
 			timeout: 11000
-		}
-	}).done(return msg);
+		},
+		success:handleResponse
+	});
 };
