@@ -5,12 +5,13 @@
    Created: 2021-08-25
 */
 
+var data;
+
 /*
 - Sends a POST request to the adapter
 - Data comes from the controller
 */
 function model(obj, sum, date, side) {
-	var data;
 	$.ajax({
 		method: "POST",
 		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/adapter/adapter.php",
