@@ -14,8 +14,8 @@ var orderIDarray = []; // Array med varje order i
 */
 $(document).ready(function() {
    /*
-   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-   - Initierar berÃ¤kningar och skriver ut resultat.
+   - Adds a new order to a table on the page 
+   - Check if an order with the same ID already exists
    */
     $("#add").click(function() {
         var inArray = jQuery.inArray($("#OrderID").val(), orderIDarray);
@@ -31,8 +31,8 @@ $(document).ready(function() {
         orderIDarray.push(tmp);
     });
    /*
-   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-   - Initierar berÃ¤kningar och skriver ut resultat.
+   - Will change the date using tenor
+   - Is not completed*
    */
     $("body").on("click", ".tenor", function(e) {
         let tenor = $("#" + this.id + ".tenor").val();
