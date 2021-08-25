@@ -12,7 +12,7 @@
 function model(obj, sum, date, side) {
 	return $.ajax({
 		method: "POST",
-		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
+		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/adapter/adapter.php",
 		data: {
 			amount: sum,
 			amountCurrency: obj[3],
