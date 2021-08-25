@@ -5,8 +5,6 @@
    Created: 2021-08-25
 */
 
-var data;
-
 /*
 - Sends a POST request to the adapter
 - Data comes from the controller
