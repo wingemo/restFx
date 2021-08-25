@@ -1,4 +1,6 @@
 function model(obj, sum, date, side) {
+    let obj;
+    
     $.ajax({
             method: "POST",
             url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
@@ -14,7 +16,7 @@ function model(obj, sum, date, side) {
             }
         })
         .done(function(msg) {
-            let obj = JSON.parse(msg);
-            return obj;
+            obj = JSON.parse(msg);
         })
+    return obj;
 }
