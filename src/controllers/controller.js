@@ -1,4 +1,4 @@
- 
+/*
    Property of Swedbank AB
    Philip Wingemo, Emil Oad
    Created: 2021-08-25
