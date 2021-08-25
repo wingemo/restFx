@@ -6,9 +6,13 @@
 */
 
 /* Globala variabler */
-marg = 0;              // 
 var orderIDarray = []; // Array med varje order i
 
+/*
+--- Compute ---
+- Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+- Initierar berÃ¤kningar och skriver ut resultat.
+*/
 $(document).ready(function() {
    /*
    --- Compute ---
