@@ -1,8 +1,8 @@
-function model(obj, sum, date, side) {
-    let tmp;
+jQuery.fn.model = function(obj, sum, date, side) {
+     let tmp;
     $.ajax({
             method: "POST",
-            url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter/adapter.php",
+            url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
             data: {
                 amount: sum,
                 amountCurrency: obj[3],
@@ -20,4 +20,4 @@ function model(obj, sum, date, side) {
         })
     console.log(tmp);
     return tmp;
-}
+};
