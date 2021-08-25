@@ -25,7 +25,5 @@ function model(obj, sum, date, side) {
 			side: side,
 			timeout: 11000
 		}
-	}).done(function(msg) {
-	  data = msg;
-	});
+	}).done(return msg);
 };
