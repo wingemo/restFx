@@ -1,4 +1,4 @@
-function model(obj, sum, date) {
+function model(obj, sum, date, side) {
     $.ajax({
             method: "POST",
             url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
