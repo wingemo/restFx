@@ -1,4 +1,4 @@
-jQuery.fn.model = function (obj, sum, date, side) {
+jQuery.fn.model = function(obj, sum, date, side) {
 	$.ajax({
 		method: "POST",
 		url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/middleware/adapter.php",
@@ -12,8 +12,7 @@ jQuery.fn.model = function (obj, sum, date, side) {
 			side: side,
 			timeout: 11000
 		}
-	})
-	.done(function (msg) {
+	}).done(function(msg) {
 		let tmp = JSON.parse(msg);
 		console.log(tmp);
 	})
