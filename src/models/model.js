@@ -23,9 +23,8 @@ function model(obj, sum, date, side) {
 			side: side,
 			timeout: 11000
 		}
-	})
-	
-	return request.done(function( msg ) {
+	});
+	request.done(function( msg ) {
 	  return JSON.parse(msg);
 	});
 };
