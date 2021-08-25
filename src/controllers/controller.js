@@ -39,7 +39,7 @@ $(document).ready(function() {
         let date = new Date($("#" + this.id + ".date").val());
         alert(date.toDateString() + tenor);
     });
-    /*
+   /*
    - Delete error messages from the page
    */
     $("body").on("click", "#hover", function(e) {
