@@ -72,8 +72,10 @@ $(document).ready(function() {
         $(this).css('cursor', 'pointer');
     });
    /*
-   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
-   - Initierar berÃ¤kningar och skriver ut resultat.
+   - Sends an order to the model
+   - Adds a new row to the table for approved orders
+   - Displays a error message if the order did not pass through
+   - Changes the button to red if the order went through
    */
     $("body").on("click", ".send", function() {
         let obj = $("#" + this.id).text();
