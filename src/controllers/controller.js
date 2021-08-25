@@ -4,10 +4,17 @@
    Philip Wingemo
    Created: 2021-08-25
 */
-
 $(document).ready(function() {
-    marg = 0;
-    var orderIDarray = [];
+   /* Globala variabler */
+   marg = 0;              // 
+   var orderIDarray = []; // Array med varje order i
+
+   
+   /*
+   --- Compute ---
+   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+   - Initierar berÃ¤kningar och skriver ut resultat.
+   */
     $("#add").click(function() {
         var inArray = jQuery.inArray($("#OrderID").val(), orderIDarray);
         if (inArray == -1) {
@@ -21,14 +28,29 @@ $(document).ready(function() {
         let tmp = $("#OrderID").val();
         orderIDarray.push(tmp);
     });
+   /*
+   --- Compute ---
+   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+   - Initierar berÃ¤kningar och skriver ut resultat.
+   */
     $("body").on("click", ".tenor", function(e) {
         let tenor = $("#" + this.id + ".tenor").val();
         let date = new Date($("#" + this.id + ".date").val());
         alert(date.toDateString() + tenor);
     });
+    /*
+   --- Compute ---
+   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+   - Initierar berÃ¤kningar och skriver ut resultat.
+   */
     $("body").on("click", "#hover", function(e) {
         $("#hover").remove();
     });
+   /*
+   --- Compute ---
+   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+   - Initierar berÃ¤kningar och skriver ut resultat.
+   */
     $("body").on("click", ".select_amount", function() {
         var price = parseFloat($("#" + this.id + ".price").html());
         var select = parseFloat($("#" + this.id + ".select_amount").val());
@@ -38,12 +60,27 @@ $(document).ready(function() {
             $("#" + this.id + ".total").val(price);
         }
     });
+   /*
+   --- Compute ---
+   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+   - Initierar berÃ¤kningar och skriver ut resultat.
+   */
     $("body").on("click", ".header", function(e) {
         $("[data-for=" + this.id + "]").slideToggle("");
     });
+   /*
+   --- Compute ---
+   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+   - Initierar berÃ¤kningar och skriver ut resultat.
+   */
     $("table").hover(function() {
         $(this).css('cursor', 'pointer');
     });
+   /*
+   --- Compute ---
+   - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
+   - Initierar berÃ¤kningar och skriver ut resultat.
+   */
     $("body").on("click", ".send", function() {
         let obj = $("#" + this.id).text();
         obj = obj.split(" ");
