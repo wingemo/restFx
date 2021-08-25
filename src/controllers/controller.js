@@ -4,12 +4,12 @@
    Philip Wingemo
    Created: 2021-08-25
 */
-$(document).ready(function() {
-   /* Globala variabler */
-   marg = 0;              // 
-   var orderIDarray = []; // Array med varje order i
 
-   
+/* Globala variabler */
+marg = 0;              // 
+var orderIDarray = []; // Array med varje order i
+
+$(document).ready(function() {
    /*
    --- Compute ---
    - Kollar vÃ¤rden frÃ¥n formulÃ¤r.
