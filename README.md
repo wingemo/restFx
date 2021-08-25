@@ -9,7 +9,3 @@ Philip Wingemo - Some design choices
 
 ### Make a test-request
 
-Run the following to make a request:
-```
-cd scripts
-npm run make-request.js
