@@ -52,7 +52,7 @@ $( document ).ready(function() {
   let side = $("#"+this.id +  ".side").val();
   $.ajax({
     method: "POST",
-    url: "back.php",
+    url: "http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/adapter/adapter.php",
     data: {
              amount:sum,
              amountCurrency:obj[3],
