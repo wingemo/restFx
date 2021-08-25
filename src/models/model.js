@@ -16,6 +16,7 @@ function model(obj, sum, date, side) {
         })
         .done(function(msg) {
             tmp = JSON.parse(msg);
+             console.log(tmp);
         })
     console.log(tmp);
     return tmp;
