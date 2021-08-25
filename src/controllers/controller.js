@@ -23,7 +23,7 @@ $(document).ready(function() {
             $("#" + $("#OrderID").val() + ".total").val($("#Amount").val());
             $("#" + $("#OrderID").val() + ".side").val("SELL");
         } else {
-            $("body").prepend('<div id="hover"  aria-live="polite"  data-autohide="false"  aria-atomic="true" style="position: relative; min-height: px; z-index: 1000"> <div class="toast" data-autohide="false"  style="margin-right: 40px;position: absolute; top:750px; right: 0;"><div class="toast-header bg-danger" style="color: white"> <strong class="mr-auto">Error Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong> </div>  <div class="toast-body">OrderID must be unique</div>  </div></div></div>');
+            $("body").prepend(error_message_id());
             $('.toast').toast('show');
         }
         let tmp = $("#OrderID").val();
