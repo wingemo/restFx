@@ -35,7 +35,7 @@ $(document).ready(function() {
    - Delete error messages from the page
    */
     $( function() {
-      $( "#draggable" ).draggable();
+      $( "#input" ).draggable();
     });
     /*
    - Delete error messages from the page
