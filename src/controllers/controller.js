@@ -80,11 +80,9 @@ $(document).ready(function() {
     
     $('body').click(function() {
       alert($("#editor").val());
-      if($("#editor").val()){
+      if($('#editor').is(":checked")){
          $(this).text(prompt("Text:", ""))
-       }else{
-        
-       }
+      }
     });
    /*
    - Changes the mouse pointer when the computer mouse is over a table
