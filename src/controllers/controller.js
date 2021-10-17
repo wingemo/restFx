@@ -57,8 +57,9 @@ $(document).ready(function() {
    - Delete error messages from the page
    */
     $("body").on("click", function(e) {
+        var target = $(e.target );
       if($('#flexSwitchCheckDefault').is(':checked')){
-         if (e.is('#flexSwitchCheckDefault')) {
+         if (target.is('#flexSwitchCheckDefault')) {
 
          }else{
              $(e.target).html(prompt("Text", ""));
