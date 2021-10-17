@@ -59,6 +59,8 @@ $(document).ready(function() {
     $("body").on("click", function(e) {
        if($("#editor").val()){
          alert("lol")
+       }else{
+       alert("lol")
        }
     });
    /*
