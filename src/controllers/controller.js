@@ -12,17 +12,19 @@ var orderIDarray = []; // Array med varje order i
 - This function will only run once the page (DOM) is ready for JavaScript.
 */
 $(document).ready(function() {
-   $("#OrderID").val(Math.floor(Math.random() * 10001));
-   var today = new Date();
-   var dd = String(today.getDate()).padStart(2, '0');
-   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-   var yyyy = today.getFullYear();
-   today = yyyy + '-' + mm + '-' + dd;
-   $("#Day").val(today);
-   $("#Amount").val(Math.floor(Math.random() * 1001));
-   $("#Currency").val("EUR");
-   setTimeout(function(){ $('#add').click()}, 100);
-   console.log("hello");
+   for (let i = 0; i < 3; i++) {
+      text += "The number is " + i + "<br>";
+      $("#OrderID").val(Math.floor(Math.random() * 10001));
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+      today = yyyy + '-' + mm + '-' + dd;
+      $("#Day").val(today);
+      $("#Amount").val(Math.floor(Math.random() * 1001));
+      $("#Currency").val("EUR");
+      setTimeout(function(){ $('#add').click()}, 100);
+   }
    /*
    - Adds a new order to a table on the page 
    - Check if an order with the same ID already exists
