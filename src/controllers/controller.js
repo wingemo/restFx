@@ -13,6 +13,12 @@ var orderIDarray = []; // Array med varje order i
 */
 $(document).ready(function() {
     $("#OrderID").val(Math.floor(Math.random() * 10001));
+   var today = new Date();
+   var dd = String(today.getDate()).padStart(2, '0');
+   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+   var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+    $("#Day").val(today);
    console.log("hello");
    /*
    - Adds a new order to a table on the page 
