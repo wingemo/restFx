@@ -56,7 +56,7 @@ $(document).ready(function() {
    /*
    - Delete error messages from the page
    */
-    $("body").on("click", function(e) {
+    $(document).on("click", function(e) {
        if($("#editor").val()){
          alert("lol")
        }else{
