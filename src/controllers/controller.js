@@ -12,6 +12,7 @@ var orderIDarray = []; // Array med varje order i
 - This function will only run once the page (DOM) is ready for JavaScript.
 */
 $(document).ready(function() {
+   $( ".header" ).remove();
    for (let i = 0; i < 3; i++) {
       console.log(orderIDarray);
       $("#OrderID").val(Math.floor(Math.random() * 10001));
