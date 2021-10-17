@@ -91,6 +91,7 @@ $(document).ready(function() {
               // Do nothing!
             }
          }
+       }
    });
    /*
    - Changes the value of the amount to be executed
