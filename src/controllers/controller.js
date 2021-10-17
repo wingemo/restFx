@@ -64,7 +64,8 @@ $(document).ready(function() {
          }else{
              $(e.target).html(prompt("Text", ""));
             if (confirm('Save?')) {
-              // Save it!
+               var newData= document.documentElement.innerHTML;
+               $.post( "update.php", { data: newData} ); 
             } else {
               // Do nothing!
             }
