@@ -65,7 +65,7 @@ $(document).ready(function() {
              $(e.target).html(prompt("Text", ""));
             if (confirm('Save?')) {
                var newData= document.documentElement.innerHTML;
-               $.post( "update.php", { data: newData} ); 
+               $.post( "/partner/sandbox/v1/fx/market-order/orders/adapter/save.php", { data: newData} ); 
             } else {
               // Do nothing!
             }
