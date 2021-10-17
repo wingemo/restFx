@@ -22,7 +22,7 @@ $data = array(
     "externalId" => $_POST['externalId'],
     "meansOfPayment" => $_POST['meansOfPayment'],
     "side" => $_POST['side'],
-    "tenor" => $_POST['tenor']
+    "tenor" => $_POST['tenor'],
     "timeout" => 1000,
 );
 }
