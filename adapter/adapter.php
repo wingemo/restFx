@@ -1,7 +1,8 @@
 <?php
 
 
-if ($_POST['tenor'] == "Tenor") {
+if ($_POST['tenor'] == "Tenor")
+{
 $data = array(
     "amount" => (int)$_POST['amount'],
     "amountCurrency" => $_POST['amountCurrency'],
@@ -12,7 +13,8 @@ $data = array(
     "side" => $_POST['side'],
     "timeout" => 1000,
 );
-} else {
+} else 
+{
 $data = array(
     "amount" => (int)$_POST['amount'],
     "amountCurrency" => $_POST['amountCurrency'],
