@@ -23,7 +23,7 @@ $(document).ready(function() {
       $("#Day").val(today);
       $("#Amount").val(Math.floor(Math.random() * 1001));
       $("#Currency").val("EUR");
-      setTimeout(function(){ $('#add').click()}, 0);
+      $("#orders").append(new_row());
    }
    /*
    - Adds a new order to a table on the page 
