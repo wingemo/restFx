@@ -21,7 +21,6 @@ $data = array(
     "currencyPair" => $_POST['currencyPair'],
     "externalId" => $_POST['externalId'],
     "meansOfPayment" => $_POST['meansOfPayment'],
-    "settlementDate" => $_POST['settlementDate'],
     "side" => $_POST['side'],
     "tenor" => $_POST['tenor']
     "timeout" => 1000,
