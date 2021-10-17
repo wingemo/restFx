@@ -56,6 +56,7 @@ $(document).ready(function() {
     $("body").on("click", function(e) {
     // Change text
       if($('#flexSwitchCheckDefault').is(':checked')){
+         alert($(this).attr('id'));
          if($(this).attr('id') == "flexSwitchCheckDefault"){
          }else{   
           $(e.target).html(prompt("Text", ""));
