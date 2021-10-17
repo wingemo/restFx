@@ -60,7 +60,7 @@ $(document).ready(function() {
        if($("#editor").val()){
          alert("lol")
        }else{
-       alert("lol")
+         
        }
     });
    /*
