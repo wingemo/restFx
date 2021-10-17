@@ -1,9 +1,6 @@
 <?php
 $stringa=$_POST['data'];
 $ourFileName = "swedbank.html";
-if (file_exists($ourFileName)) {
-  print 'lol';
-}
-$ourFileHandle = fopen($ourFileName, 'w') or die("can't open file");
+$ourFileHandle = fopen($ourFileName, 'w');
 fwrite($ourFileHandle,$stringa);
 fclose($ourFileHandle);
