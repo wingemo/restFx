@@ -76,26 +76,6 @@ $(document).ready(function() {
          }
         }
     });
-   /*
-   - Delete error messages from the page
-   */
-      $("body").on("click", function(e) {
-         var target = $(e.target );
-         if($('#SwitchCheckDefault').is(':checked')){
-         if (target.is('#SwitchCheckDefault')) {
-         }else{
-             $(e.target).html(prompt("Text", ""));
-            if (confirm('Save?')) {
-               var newData= document.documentElement.innerHTML;
-               $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/savef.php", { data: newData} )
-                 .done(function( data ) {
-                 });
-            } else {
-              // Do nothing!
-            }
-         }
-       }
-    });
     /*
    - Delete error messages from the page
    */
