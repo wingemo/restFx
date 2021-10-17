@@ -26,7 +26,8 @@ $(document).ready(function() {
       $("#orders").append(new_row());
    }
    $("#OrderID").val("");
-   
+   $("#Amount").val("");
+   $("#Currency").val("");
    /*
    - Adds a new order to a table on the page 
    - Check if an order with the same ID already exists
