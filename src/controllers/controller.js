@@ -31,9 +31,14 @@ $(document).ready(function() {
    $("#OrderID").val("");
    $("#Amount").val("");
    $("#Currency").val("");
-   /*
-   - Adds a new order to a table on the page 
-   - Check if an order with the same ID already exists
+    /*
+   - Delete error messages from the page
+   */
+    $( function() {
+      $( "#draggable" ).draggable();
+    });
+    /*
+   - Delete error messages from the page
    */
     $("#add").click(function() {
         var inArray = jQuery.inArray($("#OrderID").val(), orderIDarray);
