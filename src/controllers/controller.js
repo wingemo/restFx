@@ -80,9 +80,9 @@ $(document).ready(function() {
     
     $('body').click(function() {
       if($("#editor").val()){
-         alert("lol")
-       }else{
          $(this).text(prompt("Text:", ""))
+       }else{
+        
        }
     });
    /*
