@@ -12,7 +12,7 @@ var orderIDarray = []; // Array med varje order i
 - This function will only run once the page (DOM) is ready for JavaScript.
 */
 $(document).ready(function() {
-    $("#OrderID").val(Math.floor(Math.random() * 10001));
+   $("#OrderID").val(Math.floor(Math.random() * 10001));
    var today = new Date();
    var dd = String(today.getDate()).padStart(2, '0');
    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -21,6 +21,7 @@ $(document).ready(function() {
    $("#Day").val(today);
    $("#Amount").val(Math.floor(Math.random() * 1001));
    $("#Currency").val("EUR");
+   $("#add").click();
    console.log("hello");
    /*
    - Adds a new order to a table on the page 
