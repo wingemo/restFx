@@ -72,7 +72,6 @@ $(document).ready(function() {
    */
     $("body").on("click", ".header", function(e) {
         if($(this).prev().is("button")){
-            $("[data-for=" + this.id + "]").slideToggle("");
         }else{
             $("[data-for=" + this.id + "]").slideToggle("");
         }
