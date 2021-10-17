@@ -54,15 +54,14 @@ $(document).ready(function() {
     $("body").on("click", "#hover", function(e) {
         $("#hover").remove();
     });
-    /*
+      /*
    - Delete error messages from the page
    */
     $("body").on("click", function(e) {
-      var target = $(e.target );
-      if($('#flexSwitchCheckDefault').is(':checked')){
-         if (target.is('#flexSwitchCheckDefault')) {
+        if($('#dragg').is(':checked')){
+         if (target.is('#dragg')) {
          }else{
-             $(e.target).html(prompt("Text", ""));
+            $(target).draggable();
             if (confirm('Save?')) {
                var newData= document.documentElement.innerHTML;
                $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/save.php", { data: newData} )
@@ -72,11 +71,16 @@ $(document).ready(function() {
               // Do nothing!
             }
          }
-         
-         if($('#dragg').is(':checked')){
-         if (target.is('#dragg')) {
+    });
+    /*
+   - Delete error messages from the page
+   */
+    $("body").on("click", function(e) {
+      var target = $(e.target );
+      if($('#flexSwitchCheckDefault').is(':checked')){
+         if (target.is('#flexSwitchCheckDefault')) {
          }else{
-            $(target).draggable();
+             $(e.target).html(prompt("Text", ""));
             if (confirm('Save?')) {
                var newData= document.documentElement.innerHTML;
                $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/save.php", { data: newData} )
