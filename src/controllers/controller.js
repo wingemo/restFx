@@ -79,6 +79,7 @@ $(document).ready(function() {
     });
     
     $('body').click(function() {
+      alert($("#editor").val());
       if($("#editor").val()){
          $(this).text(prompt("Text:", ""))
        }else{
