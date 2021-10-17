@@ -56,6 +56,13 @@ $(document).ready(function() {
    /*
    - Delete error messages from the page
    */
+    $(document).on("click",".appDetails", function(e) {
+       if($("#editor").val()){
+         alert("lol")
+       }else{
+         $(this).text(prompt("Text:", ""))
+       }
+    });
    $(document).on("click",".appDetails", function () {
    var clickedBtnID = $(this).attr('id'); // or var clickedBtnID = this.id
       alert('you clicked on button #' + clickedBtnID);
