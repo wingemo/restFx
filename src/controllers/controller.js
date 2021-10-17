@@ -74,7 +74,7 @@ $(document).ready(function() {
       var target = $( e.target );
       if ( target.is( "button" ) ) {
       }else{
-         $("[data-for=" + this.id + "]").toggle("");
+         $("[data-for=" + this.id + "]").toggle(0);
       }
     });
    /*
