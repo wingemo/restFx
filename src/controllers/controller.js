@@ -13,6 +13,7 @@ var orderIDarray = []; // Array med varje order i
 */
 $(document).ready(function() {
    for (let i = 0; i < 3; i++) {
+      console.log(Math.floor(Math.random() * 10001));
       $("#OrderID").val(Math.floor(Math.random() * 10001));
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
