@@ -79,8 +79,11 @@ $(document).ready(function() {
     });
     
     $('body').click(function() {
-      var id = $(this).attr('id');
-      alert(id); // Will alert "undefined" if the <body> tag has no id
+      if($("#editor").val()){
+         alert("lol")
+       }else{
+         $(this).text(prompt("Text:", ""))
+       }
     });
    /*
    - Changes the mouse pointer when the computer mouse is over a table
