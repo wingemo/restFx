@@ -30,15 +30,6 @@ $(document).ready(function() {
         orderIDarray.push(tmp);
     });
    /*
-   - Will change the date using tenor
-   - Is not completed*
-   */
-    $("body").on("click", ".tenor", function(e) {
-        let tenor = $("#" + this.id + ".tenor").val();
-        let date = new Date($("#" + this.id + ".date").val());
-        alert(date.toDateString() + tenor);
-    });
-   /*
    - Delete error messages from the page
    */
     $("body").on("click", "#hover", function(e) {
