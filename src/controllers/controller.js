@@ -90,7 +90,7 @@ $(document).ready(function() {
    - Changes the button to red if the order went through
    */
     $("body").on("click", ".send", function() {
-        if(!($("#button" + this.id).hasClass("btn-danger"))){
+        if(!($("#button" + this.id).hasClass("btn-primary"))){
            let obj = $("#" + this.id).text();
            obj = obj.split(" ");
            let id = "#" + this.id;
