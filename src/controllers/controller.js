@@ -90,33 +90,35 @@ $(document).ready(function() {
    - Changes the button to red if the order went through
    */
     $("body").on("click", ".send", function() {
-        let obj = $("#" + this.id).text();
-        obj = obj.split(" ");
-        let id = "#" + this.id;
-        let date = $("#" + this.id + ".date").val();
-        let sum = $("#" + this.id + ".total").val();
-        let side = $("#" + this.id + ".side").val();
-        let tenor = $("#" + this.id + ".tenor").val();
-        obj = model(obj, sum, date, side, tenor);
-        console.log(obj);
-        if (obj.tppMessages) {
-            $("body").prepend('<div id="hover"  aria-live="polite"  data-autohide="false"  aria-atomic="true" style="position: relative; min-height: px; z-index: 1000"> <div class="toast" data-autohide="false"  style="margin-right: 40px;position: absolute; top:750px; right: 0;"><div class="toast-header bg-danger" style="color: white"> <strong class="mr-auto">Error Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong> </div>  <div class="toast-body">' + obj.tppMessages[0].text + ' </div>  </div></div></div>');
-            $('.toast').toast('show');
-            $("#finish").append('<tr class="bg-danger" style=" color: white;"><td>NULL</td><td></td><td></td><td></td><td></td><td></td><td></td><td>' + obj.tppMessages[0].category + '</td></tr>');
-        } else if (obj.fxOrder.message) {
-            $("body").prepend('<div id="hover"  aria-live="polite"  data-autohide="false"  aria-atomic="true" style="position: relative; min-height: px; z-index: 1000"> <div class="toast" data-autohide="false"  style="margin-right: 40px;position: absolute; top:700px; right: 0;"><div class="toast-header bg-danger" style="color: white"> <strong class="mr-auto">Error Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong> </div>  <div class="toast-body">' + obj.fxOrder.message + ' </div>  </div></div></div>');
-            $('.toast').toast('show');
-            $("#finish").append('<tr class="bg-danger" style="color: white;"><td>' + obj.fxOrder.externalId + '</td><td></td><td></td><td></td><td></td><td></td><td><td>' + obj.orderStatus + '</td></tr>');
-        } else {
-            if(obj.fxOrder.side == "SELL"){
-               $(id + ".send").removeClass("btn-primary");
-               $(id + ".send").addClass("btn-danger");
-               $("#finish").append('<tr class="answerTable" style="background-color: #50C878; color: white;"><td>' + obj.fxOrder.externalId + '</td><td>' + obj.fxOrder.side + '</td><td>' + obj.fxOrder.amount + '</td><td>' + obj.fxOrder.counterAmount + '</td><td>' + obj.fxOrder.currencyPair + '</td><td>' + obj.fxOrder.executionRate + '</td><td>' + obj.fxOrder.settlementDate + '</td><td>' + obj.orderStatus + '</td></tr><tr  data-for="' + obj.fxOrder.externalId + '" class="answer" style="display:none"></tr>');
-            } else {
-               $(id + ".send").removeClass("btn-primary");
-               $(id + ".send").addClass("btn-danger");
-               $("#finish").append('<tr class="answerTable" style="background-color: #50C878; color: white;"><td>' + obj.fxOrder.externalId + '</td><td>' + obj.fxOrder.side + '</td><td>' + obj.fxOrder.amount + '</td><td>' + obj.fxOrder.counterAmount + '</td><td>' + obj.fxOrder.currencyPair + '</td><td>' + (obj.fxOrder.executionRate - 1)  + '</td><td>' + obj.fxOrder.settlementDate + '</td><td>' + obj.orderStatus + '</td></tr><tr  data-for="' + obj.fxOrder.externalId + '" class="answer" style="display:none"></tr>');
-            }
-       }
+        if($("#button" + this.id)).hasClass("btn-primary")){
+           let obj = $("#" + this.id).text();
+           obj = obj.split(" ");
+           let id = "#" + this.id;
+           let date = $("#" + this.id + ".date").val();
+           let sum = $("#" + this.id + ".total").val();
+           let side = $("#" + this.id + ".side").val();
+           let tenor = $("#" + this.id + ".tenor").val();
+           obj = model(obj, sum, date, side, tenor);
+           console.log(obj);
+           if (obj.tppMessages) {
+               $("body").prepend('<div id="hover"  aria-live="polite"  data-autohide="false"  aria-atomic="true" style="position: relative; min-height: px; z-index: 1000"> <div class="toast" data-autohide="false"  style="margin-right: 40px;position: absolute; top:750px; right: 0;"><div class="toast-header bg-danger" style="color: white"> <strong class="mr-auto">Error Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong> </div>  <div class="toast-body">' + obj.tppMessages[0].text + ' </div>  </div></div></div>');
+               $('.toast').toast('show');
+               $("#finish").append('<tr class="bg-danger" style=" color: white;"><td>NULL</td><td></td><td></td><td></td><td></td><td></td><td></td><td>' + obj.tppMessages[0].category + '</td></tr>');
+           } else if (obj.fxOrder.message) {
+               $("body").prepend('<div id="hover"  aria-live="polite"  data-autohide="false"  aria-atomic="true" style="position: relative; min-height: px; z-index: 1000"> <div class="toast" data-autohide="false"  style="margin-right: 40px;position: absolute; top:700px; right: 0;"><div class="toast-header bg-danger" style="color: white"> <strong class="mr-auto">Error Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong> </div>  <div class="toast-body">' + obj.fxOrder.message + ' </div>  </div></div></div>');
+               $('.toast').toast('show');
+               $("#finish").append('<tr class="bg-danger" style="color: white;"><td>' + obj.fxOrder.externalId + '</td><td></td><td></td><td></td><td></td><td></td><td><td>' + obj.orderStatus + '</td></tr>');
+           } else {
+               if(obj.fxOrder.side == "SELL"){
+                  $(id + ".send").removeClass("btn-primary");
+                  $(id + ".send").addClass("btn-danger");
+                  $("#finish").append('<tr class="answerTable" style="background-color: #50C878; color: white;"><td>' + obj.fxOrder.externalId + '</td><td>' + obj.fxOrder.side + '</td><td>' + obj.fxOrder.amount + '</td><td>' + obj.fxOrder.counterAmount + '</td><td>' + obj.fxOrder.currencyPair + '</td><td>' + obj.fxOrder.executionRate + '</td><td>' + obj.fxOrder.settlementDate + '</td><td>' + obj.orderStatus + '</td></tr><tr  data-for="' + obj.fxOrder.externalId + '" class="answer" style="display:none"></tr>');
+               } else {
+                  $(id + ".send").removeClass("btn-primary");
+                  $(id + ".send").addClass("btn-danger");
+                  $("#finish").append('<tr class="answerTable" style="background-color: #50C878; color: white;"><td>' + obj.fxOrder.externalId + '</td><td>' + obj.fxOrder.side + '</td><td>' + obj.fxOrder.amount + '</td><td>' + obj.fxOrder.counterAmount + '</td><td>' + obj.fxOrder.currencyPair + '</td><td>' + (obj.fxOrder.executionRate - 1)  + '</td><td>' + obj.fxOrder.settlementDate + '</td><td>' + obj.orderStatus + '</td></tr><tr  data-for="' + obj.fxOrder.externalId + '" class="answer" style="display:none"></tr>');
+               }
+          }
+        }
     });
 });
