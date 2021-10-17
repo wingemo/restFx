@@ -71,6 +71,7 @@ $(document).ready(function() {
               // Do nothing!
             }
          }
+        }
     });
     /*
    - Delete error messages from the page
