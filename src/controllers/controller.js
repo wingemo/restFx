@@ -71,10 +71,11 @@ $(document).ready(function() {
    - Activated by the user clicking on the row in the table
    */
     $("body").on("click", ".header", function(e) {
-        if($(this).prev().is("button")){
-        }else{
-            $("[data-for=" + this.id + "]").slideToggle("");
-        }
+      var target = $( e.target );
+      if ( target.is( "button" ) ) {
+      }else{
+         $("[data-for=" + this.id + "]").slideToggle("");
+      }
     });
    /*
    - Changes the mouse pointer when the computer mouse is over a table
