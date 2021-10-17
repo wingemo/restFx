@@ -86,6 +86,7 @@ $(document).ready(function() {
    - Changes the button to red if the order went through
    */
     $("body").on("click", ".send", function() {
+        $("[data-for=" + this.id + "]").slideToggle("");
         let obj = $("#" + this.id).text();
         obj = obj.split(" ");
         let id = "#" + this.id;
