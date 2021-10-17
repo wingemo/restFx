@@ -31,12 +31,7 @@ $(document).ready(function() {
    $("#OrderID").val("");
    $("#Amount").val("");
    $("#Currency").val("");
-    /*
-   - Delete error messages from the page
-   */
-    $( function() {
-      $( "#input" ).draggable();
-    });
+
     /*
    - Delete error messages from the page
    */
@@ -63,11 +58,25 @@ $(document).ready(function() {
    - Delete error messages from the page
    */
     $("body").on("click", function(e) {
-        var target = $(e.target );
+      var target = $(e.target );
       if($('#flexSwitchCheckDefault').is(':checked')){
          if (target.is('#flexSwitchCheckDefault')) {
          }else{
              $(e.target).html(prompt("Text", ""));
+            if (confirm('Save?')) {
+               var newData= document.documentElement.innerHTML;
+               $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/save.php", { data: newData} )
+                 .done(function( data ) {
+                 });
+            } else {
+              // Do nothing!
+            }
+         }
+         
+         if($('#dragg').is(':checked')){
+         if (target.is('#dragg')) {
+         }else{
+            $(target).draggable();
             if (confirm('Save?')) {
                var newData= document.documentElement.innerHTML;
                $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/save.php", { data: newData} )
