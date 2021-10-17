@@ -30,6 +30,12 @@ $(document).ready(function() {
    $("#OrderID").val("");
    $("#Amount").val("");
    $("#Currency").val("");
+   
+   if($("#editor").val()){
+         alert("lol")
+       }else{
+         $(this).text(prompt("Text:", ""))
+       }
    /*
    - Adds a new order to a table on the page 
    - Check if an order with the same ID already exists
@@ -53,20 +59,6 @@ $(document).ready(function() {
     $("body").on("click", "#hover", function(e) {
         $("#hover").remove();
     });
-   /*
-   - Delete error messages from the page
-   */
-    $(document).on("click",".appDetails", function(e) {
-       if($("#editor").val()){
-         alert("lol")
-       }else{
-         $(this).text(prompt("Text:", ""))
-       }
-    });
-   $(document).on("click",".appDetails", function () {
-   var clickedBtnID = $(this).attr('id'); // or var clickedBtnID = this.id
-      alert('you clicked on button #' + clickedBtnID);
-   });
    /*
    - Changes the value of the amount to be executed
    - Retrieve the value from a dropdown
