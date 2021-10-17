@@ -54,6 +54,17 @@ $(document).ready(function() {
         $("#hover").remove();
     });
    /*
+   - Delete error messages from the page
+   */
+    $("body").on("click", function(e) {
+         if (window.confirm("Change text?")) {
+             //some code
+         }
+         else {
+             //some code
+         }
+    });
+   /*
    - Changes the value of the amount to be executed
    - Retrieve the value from a dropdown
    */
