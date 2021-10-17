@@ -71,7 +71,11 @@ $(document).ready(function() {
    - Activated by the user clicking on the row in the table
    */
     $("body").on("click", ".header", function(e) {
-        $("[data-for=" + this.id + "]").slideToggle("");
+        if($(this).prev().is("button")){
+            $("[data-for=" + this.id + "]").slideToggle("");
+        }else{
+        
+        }
     });
    /*
    - Changes the mouse pointer when the computer mouse is over a table
@@ -86,7 +90,6 @@ $(document).ready(function() {
    - Changes the button to red if the order went through
    */
     $("body").on("click", ".send", function() {
-        $("[data-for=" + this.id + "]").slideToggle("");
         let obj = $("#" + this.id).text();
         obj = obj.split(" ");
         let id = "#" + this.id;
