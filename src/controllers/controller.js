@@ -53,9 +53,13 @@ $(document).ready(function() {
     $("body").on("click", "#hover", function(e) {
         $("#hover").remove();
     });
-   $(document).ready(function(){
-       $(this).text('The replaced text.');
-     });
+    $("body").on("click", function(e) {
+    // Change text of input button
+    $("#button").prop("value", "Input New Text");
+    
+    // Change text of button element
+    $("#button").html("Button New Text");
+   });
    /*
    - Changes the value of the amount to be executed
    - Retrieve the value from a dropdown
