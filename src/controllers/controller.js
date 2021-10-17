@@ -30,12 +30,6 @@ $(document).ready(function() {
    $("#OrderID").val("");
    $("#Amount").val("");
    $("#Currency").val("");
-   
-   if($("#editor").val()){
-         alert("lol")
-       }else{
-         $(this).text(prompt("Text:", ""))
-       }
    /*
    - Adds a new order to a table on the page 
    - Check if an order with the same ID already exists
@@ -82,6 +76,11 @@ $(document).ready(function() {
       }else{
          $("[data-for=" + this.id + "]").toggle(0);
       }
+    });
+    
+    $('body').click(function() {
+      var id = $(this).attr('id');
+      alert(id); // Will alert "undefined" if the <body> tag has no id
     });
    /*
    - Changes the mouse pointer when the computer mouse is over a table
