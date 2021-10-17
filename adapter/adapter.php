@@ -1,5 +1,7 @@
 <?php
 
+
+if ($_POST['tenor'] == "Tenor") {
 $data = array(
     "amount" => (int)$_POST['amount'],
     "amountCurrency" => $_POST['amountCurrency'],
@@ -10,6 +12,19 @@ $data = array(
     "side" => $_POST['side'],
     "timeout" => 1000,
 );
+} else {
+$data = array(
+    "amount" => (int)$_POST['amount'],
+    "amountCurrency" => $_POST['amountCurrency'],
+    "currencyPair" => $_POST['currencyPair'],
+    "externalId" => $_POST['externalId'],
+    "meansOfPayment" => $_POST['meansOfPayment'],
+    "settlementDate" => $_POST['settlementDate'],
+    "side" => $_POST['side'],
+    "tenor" => $_POST['tenor']
+    "timeout" => 1000,
+);
+}
 
 $postdata = json_encode($data);
 $curl = curl_init();
