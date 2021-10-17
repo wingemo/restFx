@@ -63,6 +63,8 @@ $(document).ready(function() {
          if (target.is('#dragg')) {
          }else{
             $("#input").draggable();
+            $("#table1").draggable();
+            $("#table2").draggable();
             if (confirm('Save?')) {
                var newData= document.documentElement.innerHTML;
                $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/save.php", { data: newData} )
