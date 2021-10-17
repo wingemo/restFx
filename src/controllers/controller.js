@@ -77,12 +77,6 @@ $(document).ready(function() {
          $("[data-for=" + this.id + "]").toggle(0);
       }
     });
-    
-    $('body').click(function() {
-      if($('#editor').is(":checked")){
-         $(this).text(prompt("Text:", ""))
-      }
-    });
    /*
    - Changes the mouse pointer when the computer mouse is over a table
    */
