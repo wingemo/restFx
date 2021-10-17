@@ -29,5 +29,6 @@ function model(obj, sum, date, side, tenor) {
 		output = JSON.parse(msg);
 	});
 	return output;
+	console.log(tenor);
 
 };
