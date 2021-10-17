@@ -57,7 +57,9 @@ $(document).ready(function() {
    - Delete error messages from the page
    */
     $("body").on("click", function(e) {
-       
+       if($("#editor").val()){
+         prompt("lol")
+       }
     });
    /*
    - Changes the value of the amount to be executed
