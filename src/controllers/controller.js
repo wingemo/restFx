@@ -74,7 +74,7 @@ $(document).ready(function() {
         let date = $("#" + this.id + ".date").val();
         let sum = $("#" + this.id + ".total").val();
         let side = $("#" + this.id + ".side").val();
-        let tenor = $("#" + this.id + ".side").val();
+        let tenor = $("#" + this.id + ".tenor").val();
         obj = model(obj, sum, date, side, tenor);
         console.log(obj);
         if (obj.tppMessages) {
