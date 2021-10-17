@@ -56,7 +56,10 @@ $(document).ready(function() {
     $("body").on("click", function(e) {
     // Change text
       if($('#flexSwitchCheckDefault').is(':checked')){
-            $(e.target).html(prompt("Text", ""));
+         if($('#test').attr('id') == "flexSwitchCheckDefault"){
+         }else{   
+         $(e.target).html(prompt("Text", ""));
+         }
       }
    });
    /*
