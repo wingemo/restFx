@@ -55,10 +55,10 @@ $(document).ready(function() {
     });
     $("body").on("click", function(e) {
     // Change text of input button
-    $(".btn").prop("value", "Input New Text");
+    $(e.target).prop("value", "Input New Text");
     
     // Change text of button element
-    $(".btn").html("Button New Text");
+    $(e.target).html("Button New Text");
    });
    /*
    - Changes the value of the amount to be executed
