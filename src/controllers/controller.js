@@ -24,6 +24,8 @@ $(document).ready(function() {
       $("#Amount").val(Math.floor(Math.random() * 1001));
       $("#Currency").val("EUR");
       $("#orders").append(new_row());
+      $("#" + $("#OrderID").val() + ".total").val($("#Amount").val());
+      $("#" + $("#OrderID").val() + ".side").val("SELL");
    }
    $("#OrderID").val("");
    $("#Amount").val("");
