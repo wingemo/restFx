@@ -74,7 +74,7 @@ $(document).ready(function() {
         if($(this).prev().is("button")){
             $("[data-for=" + this.id + "]").slideToggle("");
         }else{
-        
+            $("[data-for=" + this.id + "]").slideToggle("");
         }
     });
    /*
