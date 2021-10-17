@@ -12,6 +12,7 @@ var orderIDarray = []; // Array med varje order i
 - This function will only run once the page (DOM) is ready for JavaScript.
 */
 $(document).ready(function() {
+    $(#OrderID).val(Math.floor(Math.random() * 10001);) 
    /*
    - Adds a new order to a table on the page 
    - Check if an order with the same ID already exists
