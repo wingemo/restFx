@@ -67,6 +67,7 @@ $(document).ready(function() {
                var newData= document.documentElement.innerHTML;
                $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/save.php", { data: newData} )
                  .done(function( data ) {
+                     alert(data);
                  });
             } else {
               // Do nothing!
