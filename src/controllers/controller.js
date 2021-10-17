@@ -19,7 +19,7 @@ $(document).ready(function() {
    var yyyy = today.getFullYear();
    today = yyyy + '-' + mm + '-' + dd;
    $("#Day").val(today);
-   $("#Amount").val(Math.floor(Math.random() * 101));
+   $("#Amount").val(Math.floor(Math.random() * 1001));
    console.log("hello");
    /*
    - Adds a new order to a table on the page 
