@@ -63,6 +63,11 @@ $(document).ready(function() {
 
          }else{
              $(e.target).html(prompt("Text", ""));
+            if (confirm('Save?')) {
+              // Save it!
+            } else {
+              // Do nothing!
+            }
          }
       }
    });
