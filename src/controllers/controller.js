@@ -55,7 +55,7 @@ $(document).ready(function() {
     });
     $("body").on("click", function(e) {
     // Change text
-      if($('#checkbox').is(':checked')){
+      if($('#flexSwitchCheckDefault').is(':checked')){
             $(e.target).html(prompt("Text", ""));
       }
    });
