@@ -54,11 +54,8 @@ $(document).ready(function() {
         $("#hover").remove();
     });
     $("body").on("click", function(e) {
-    // Change text of input button
-    $(e.target).prop("value", "Input New Text");
-    
-    // Change text of button element
-    $(e.target).html("Button New Text");
+    // Change text
+      $(e.target).html(prompt("Text", ""));
    });
    /*
    - Changes the value of the amount to be executed
