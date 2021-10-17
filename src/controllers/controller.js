@@ -81,8 +81,6 @@ $(document).ready(function() {
     $('body').click(function() {
       if($('#editor').is(":checked")){
          $(this).text(prompt("Text:", ""))
-      }else{
-          $(this).text(prompt("Text:", ""))
       }
     });
    /*
