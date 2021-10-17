@@ -8,7 +8,7 @@
 - Sends a POST request to the adapter
 - Data comes from the controller
 */
-function model(obj, sum, date, side) {
+function model(obj, sum, date, side, tenor) {
 	var output;
 	$.ajax({
 		async: false,
@@ -22,6 +22,7 @@ function model(obj, sum, date, side) {
 			meansOfPayment: "HEDGE",
 			settlementDate: date,
 			side: side,
+                        tenor: tenor,
 			timeout: 11000
 		}
 	}).done(function(msg) {
