@@ -21,7 +21,7 @@ $(document).ready(function() {
    $("#Day").val(today);
    $("#Amount").val(Math.floor(Math.random() * 1001));
    $("#Currency").val("EUR");
-   $("#add")[0].click();
+   setTimeout(function(){ $('#add').click()}, 100);
    console.log("hello");
    /*
    - Adds a new order to a table on the page 
