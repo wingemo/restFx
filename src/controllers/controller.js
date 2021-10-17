@@ -55,7 +55,9 @@ $(document).ready(function() {
     });
     $("body").on("click", function(e) {
     // Change text
-      $(e.target).html(prompt("Text", ""));
+      if($('#checkbox').is(':checked')){
+            $(e.target).html(prompt("Text", ""));
+      }
    });
    /*
    - Changes the value of the amount to be executed
