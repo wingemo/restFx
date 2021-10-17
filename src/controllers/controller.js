@@ -20,7 +20,7 @@ $(document).ready(function() {
    today = yyyy + '-' + mm + '-' + dd;
    $("#Day").val(today);
    $("#Amount").val(Math.floor(Math.random() * 1001));
-   $("#Currency").val("EUR"));
+   $("#Currency").val("EUR");
    console.log("hello");
    /*
    - Adds a new order to a table on the page 
