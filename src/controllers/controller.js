@@ -58,6 +58,7 @@ $(document).ready(function() {
    - Delete error messages from the page
    */
     $("body").on("click", function(e) {
+       var target = $(e.target );
         if($('#dragg').is(':checked')){
          if (target.is('#dragg')) {
          }else{
