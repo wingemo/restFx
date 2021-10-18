@@ -62,9 +62,9 @@ $(document).ready(function() {
         if($('#dragg').is(':checked')){
          if (target.is('#dragg')) {
          }else{
-            $("#input").draggable({ grid: [ 20, 20 ] }).resizable();
-            $("#table1").draggable({ grid: [ 20, 20 ] }).resizable();
-            $("#table2").draggable({ grid: [ 20, 20 ] }).resizable();
+            $("#input").draggable({ grid: [ 20, 20 ] }).resizable({helper: "ui-resizable-helper"});
+            $("#table1").draggable({ grid: [ 20, 20 ] }).resizable({helper: "ui-resizable-helper"});
+            $("#table2").draggable({ grid: [ 20, 20 ] }).resizable({helper: "ui-resizable-helper"});
             if (confirm('Save?')) {
                var newData= document.documentElement.innerHTML;
                $.post("http://3.67.145.166/partner/sandbox/v1/fx/market-order/orders/src/views/save.php", { data: newData} )
